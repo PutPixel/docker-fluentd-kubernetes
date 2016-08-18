@@ -37,7 +37,7 @@ cat << EOF >> /etc/fluent/fluent.conf
   @type tail
   path /var/log/containers/*.log
   pos_file /var/log/es-containers.log.pos
-  time_format %Y-%m-%dT%H:%M:%S.%N
+  time_key timestamp
   tag kubernetes.*
   format json
   read_from_head true
